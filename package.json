@@ -1,0 +1,42 @@
+{
+  "name": "hls-live-window",
+  "version": "0.1.0",
+  "description": "Track the playable window of HLS live playlists: merge, align renditions, confirm gaps and plan refresh/catch-up. No networking, no media download, no UI.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "hls",
+    "live",
+    "playlist",
+    "media-sequence",
+    "rendition",
+    "discontinuity",
+    "catchup"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  }
+}
